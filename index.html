@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="body">
+    <div class="header">
+        <h1>Memory Game</h1>
+    </div>
+
+    <div class="moves">
+        <p>Moves: <span id="move-counter"> 0</span></p>
+    </div>
+
+    <div id="game-board"></div>
+ </div>
+
+ <div id="win-overlay">
+    <div id="win-box">
+        <h2>Yayyy you won! 🎉</h2>
+        <p>You needed <span id="final-moves">0</span> moves.</p>
+        <button id="restart-button">Play Again</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
