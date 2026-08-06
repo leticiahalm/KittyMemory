@@ -137,3 +137,48 @@ p{
     opacity: 0.8;
     color: #2c2236
 }
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    #game-board {
+        grid-template-columns: repeat(4, 75px);
+        gap: 10px;
+    }
+
+    .card {
+        width: 75px;
+        height: 75px;
+    }
+
+    #win-box {
+        padding: 25px;
+        margin: 20px;
+    }
+
+    #win-box h2 {
+        font-size: 28px;
+    }
+
+    #win-box p {
+        font-size: 18px;
+    }
+
+    #restart-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
