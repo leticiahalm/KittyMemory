@@ -1,15 +1,15 @@
-const colors = [
-    "red",
-    "blue",
-    "green",
-    "yellow",
-    "purple",
-    "orange",
-    "pink",
-    "brown"
+const images = [
+    "images/cat1.png",
+    "images/cat2.png",
+    "images/cat3.png",
+    "images/cat4.png",
+    "images/cat5.png",
+    "images/cat6.png",
+    "images/cat7.png",
+    "images/cat8.png"
 ];
 
-let cards = [...colors, ...colors];
+let cards = [...images, ...images];
 
 cards.sort(() => Math.random() - 0.5);
 
@@ -28,27 +28,30 @@ const finalMoves = document.getElementById("final-moves");
 const restartButton = document.getElementById("restart-button");
 
 
-cards.forEach(color => {
+cards.forEach(image => {
 
     const card = document.createElement("div");
     card.classList.add("card");
 
-    card.dataset.color = color;
+    card.dataset.image = image;
 
     card.innerHTML = `
-    <div class="card-inner">
-        <div class="card-front"></div>
-        <div class="card-back"></div>
-    </div>
+        <div class="card-inner">
+            <div class="card-front">
+                <img src="${image}" alt="Memory Card">
+            </div>
+            <div class="card-back">
+                <img src="images/back.png" alt="Card Back">
+            </div>
+        </div>
     `;
-
-    card.querySelector(".card-front").style.backgroundColor = color;
 
     card.addEventListener("click", flipCard);
 
     board.appendChild(card);
 
 });
+
 
 function flipCard(){
 
@@ -74,7 +77,7 @@ function flipCard(){
 
 function checkMatch(){
 
-    if(firstCard.dataset.color === secondCard.dataset.color){
+    if(firstCard.dataset.image === secondCard.dataset.image){
 
         firstCard.classList.add("matched");
         secondCard.classList.add("matched");
